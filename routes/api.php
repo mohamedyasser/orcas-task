@@ -15,7 +15,7 @@ use App\Http\Controllers\Api\V1\UsersController;
 */
 
 Route::prefix('v1')->group(function () {
-    Route::prefix('users')->controller(UsersController::class)->group(function () {
+    Route::prefix('users')->middleware('auth.apikey')->controller(UsersController::class)->group(function () {
         Route::get('/', 'index');
         Route::get('/search', 'search');
     });
