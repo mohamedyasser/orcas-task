@@ -30,4 +30,24 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
+    'users' => [
+        'v1' => [
+            'url' => env('USERS_V1_URL'),
+            'schema' => [
+                'email' => 'email',
+                'first_name' => 'firstName',
+                'last_name' => 'lastName',
+                'avatar' => 'avatar'
+            ],
+        ],
+        'v2' => [
+            'url' => env('USERS_V2_URL'),
+            'schema' => [
+                'email' => 'email',
+                'first_name' => 'fName',
+                'last_name' => 'lName',
+                'avatar' => 'picture'
+            ],
+        ],
+    ],
 ];
